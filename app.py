@@ -27,10 +27,15 @@ def scrape():
     return redirect(url_for('predictions'))
 
 
+# @app.route('/predictions')
+# def predictions():
+#     result = img_predictions()
+#     return result
+
 @app.route('/predictions')
 def predictions():
     result = img_predictions()
-    return result
+    return render_template('result.html', result=result)
 
 
 if __name__ == '__main__':
