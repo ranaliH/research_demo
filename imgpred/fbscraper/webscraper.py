@@ -19,16 +19,16 @@ def run_web_scraper(fbemail, fbpassword):
     # Create the container if it doesn't exist
     # create_container(container_name)
 
-    # Disable browser notifications
+    # Configure Chrome options for headless mode
     chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument("--headless")  # headless mode
+
+    # Disable browser notifications
+    # chrome_options = webdriver.ChromeOptions()
     prefs = {"profile.default_content_setting_values.notifications": 2}
     chrome_options.add_experimental_option("prefs", prefs)
 
-    # Configure Chrome options for headless mode
-    # chrome_options = webdriver.ChromeOptions()
-    # chrome_options.add_argument("--headless")  # headless mode
-
-    # Specify the path to chromedriver.exe
+        # Specify the path to chromedriver.exe
     chromedriver_path = 'C:/Program Files/drivers/chromedriver.exe'
 
     # Initialize the webdriver
